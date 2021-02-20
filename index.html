@@ -1,0 +1,66 @@
+<!-- reference:
+	using MathJax API to display formulas
+	accessable from: https://www.mathjax.org/
+
+	overleaf guide for Latex mathematical formulas: https://www.overleaf.com/learn/latex/Mathematical_expressions
+ 	guide on latex for the dot product symbol (\cdot): https://tex.stackexchange.com/questions/113686/writing-multiplication-dots
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fitts' Law Calculator</title>
+		<link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/calc.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<main>
+			<div id="intro">
+		    <h1>Fitts' Law Calculator</h1>
+				<p> Fitts' Law calculates \(MT \), the time taken for a user to perform a given movement and reach the target object of that movement.</p>
+				<p>	Where \(a \) and \(b \) are constants based on existing knowledge about the movement. \(D\) is the distance between the start point and the target, and \(W\) is the width of the target.</p>
+				<p>	This calculator allows you to choose one of three versions of Fitts' law, input the values you have determined for the variables and calculate MT.</p>
+			</div><!-- #intro -->
+
+			<div id="choose">
+				<h2>Choose a formula</h2>
+				<div id="formulasDiv">
+					<div id='plusOne' onclick='chooseFormula(0)'>
+						$$MT = a + b \cdot \log_{2}({D \over W} + 1).$$
+					</div>
+					<div id='plain'  onclick='chooseFormula(1)'>
+						$$MT = a + b \cdot \log_{2}({D \over W}).$$
+					</div>
+					<div id='multiplyByTwo'  onclick='chooseFormula(2)'>
+						$$MT = a + b \cdot \log_{2}(2{D \over W}).$$
+					</div>
+				</div><!--#formulasDiv -->
+			</div> <!-- #choose -->
+
+			<div id="entries">
+				<!-- https://stackoverflow.com/a/34057860 for allowing floats in the input -->
+				<h2>Enter your variables</h2>
+				<label>a</label>
+		    <input id='a' type="number" step="any">
+				<label>b</label>
+				<input id='b' type="number" step="any">
+				<label>D</label>
+				<input id='D' type="number" step="any">
+				<label>W</label>
+				<input id='W' type="number" step="any">
+		    <button type="button" onclick="calc()">Go</button>
+			</div><!-- #entries -->
+
+			<div id="solution">
+				<h2>Your solution is: </h2>
+				<h3 id="answer"></h3>
+			</div><!-- #solution -->
+
+			<p id='credit'>background photo by <a href="https://unsplash.com/@henry_be?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Henry Be</a> on <a href="https://unsplash.com/">Unsplash</a></p>
+			<!-- photo source: https://unsplash.com/photos/IicyiaPYGGI -->
+		</main>
+	</body>
+</html>

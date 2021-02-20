@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya:500|Barlow+Condensed|Raleway|Ubuntu+Mono&display=swap');
+
+
+body {
+  background-image: URL("https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80");
+  background-size: cover;
+	background-position: 0px 0px;
+  font-family: Barlow Condensed, sans-serif; 
+}
+
+#plusOne, #plain, #multiplyByTwo {
+  background-color: white;
+  width: 250px;
+  Height: 90px;
+  display: inline-block;
+  margin: 0px 10px;
+  font-size: 16px;
+  padding-top: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+#intro, #choose, #entries, #solution {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 80%;
+}
+
+#choose {
+  padding-top: 0%;
+}
+
+#entries, #solution{
+  background-color: white;
+  padding: 10px 20px 40px 20px;
+}
+
+h1, h2, h3, #credit, #credit>a:visited {
+  color: rgb(143, 38, 0);
+}
+
+p {
+  font-size: 20px;
+}
+
+main {
+  background-color: rgba(255,255,255,0.4);
+  width: 90%;
+  min-height: 90vh; 
+  margin: 1% 4%;
+  padding: 1%;
+  border-radius: 10px;
+}
+
+input {
+  border: 1px solid rgb(255, 191, 168);
+  border-radius: 5px;
+  margin: 0px 10px;
+  padding: 5px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#answer {
+  color: black;
+  font-weight:  normal;
+  font-size: 25px;
+}
+
+#solution {
+  padding-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(143, 38, 0);
+  color: white;
+  font-size: 18px;
+  width: 80px;
+}
+
+/*getting rid of the arrow selectors: https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
